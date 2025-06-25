@@ -26,11 +26,17 @@ def main():
     text = get_book_text("./books/frankenstein.txt")
     total = get_num_words(text)
     letters = get_num_letters(text)
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {total} total words")
+    print("--------- Character Count -------")
+    clean = sort_output(letters)
+    for key, value in clean.items():
+        print(f"{key}: {value}")
 
-    print(f"{total} words found in the document")
 
-
-    print(sort_output(letters))
+    print("============= END ===============")
     pass
 
 
