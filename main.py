@@ -1,6 +1,9 @@
 #!/usr/bin/python3 -O
 #starting script, contains debug options, add -O when script is in production
 
+from stats import get_num_words
+
+
 if __debug__:
     print("---start")
 
@@ -15,17 +18,14 @@ def get_book_text(book):
         file_contents = f.read()
     return(file_contents)
 
-def total_words(text):
-    word_list = text.split()
-    words = len(word_list)
-    return words
+
 
 
 
 def main():
     
     text = get_book_text("./books/frankenstein.txt")
-    total = total_words(text)
+    total = get_num_words(text)
     print(f"{total} words found in the document")
     pass
 
