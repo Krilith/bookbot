@@ -6,7 +6,15 @@ def get_num_words(text):
 
 #counts character total from sting
 def get_num_letters(text):
-    all_lower = text.lower()
-    letters = "test"
+    text_counts = {}
+    text = text.lower()
+    letters = list(text)
+    unique_list = set(letters)
+    for each in unique_list:
+        ammount = text.count(each)
+        text_counts[each] = ammount
 
-    return letters
+
+
+
+    return text_counts
