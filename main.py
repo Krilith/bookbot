@@ -2,7 +2,7 @@
 #starting script, contains debug options, add -O when script is in production
 
 from stats import get_num_words
-
+from stats import get_num_letters
 
 if __debug__:
     print("---start")
@@ -26,7 +26,10 @@ def main():
     
     text = get_book_text("./books/frankenstein.txt")
     total = get_num_words(text)
+    letters = get_num_letters(text)
+
     print(f"{total} words found in the document")
+    print(letters)
     pass
 
 
