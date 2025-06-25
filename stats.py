@@ -13,8 +13,12 @@ def get_num_letters(text):
     for each in unique_list:
         ammount = text.count(each)
         text_counts[each] = ammount
-
-
-
-
     return text_counts
+
+#sorts the output 
+def sort_output(text):
+    
+
+
+    return(text)
+

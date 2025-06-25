@@ -1,8 +1,7 @@
 #!/usr/bin/python3 -O
 #starting script, contains debug options, add -O when script is in production
 
-from stats import get_num_words
-from stats import get_num_letters
+from stats import get_num_words, sort_output, get_num_letters
 
 if __debug__:
     print("---start")
@@ -29,7 +28,9 @@ def main():
     letters = get_num_letters(text)
 
     print(f"{total} words found in the document")
-    print(letters)
+
+
+    print(sort_output(letters))
     pass
 
 
